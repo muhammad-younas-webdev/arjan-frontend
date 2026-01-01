@@ -1,0 +1,523 @@
+/*
+Developer Name: Muhammad Hamza
+Author: Hamza
+Email: Muhammadhamza.webdev@gmail.com
+File: style.css
+*/
+/* ------------------------------
+   Font integration
+------------------------------ */
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* ------------------------------
+   CSS Reset
+------------------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  outline: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Generic placeholder styling for ALL browsers and ALL input types */
+::-webkit-input-placeholder {
+  /* Chrome, Safari, Opera, Edge Chromium */
+  color: black;
+  opacity: 1;
+}
+
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: black;
+  opacity: 1;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: black;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge (old versions) */
+  color: black;
+}
+
+::placeholder {
+  /* Modern browsers */
+  color: black;
+  opacity: 1;
+}
+
+/* Apply to ALL input elements */
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+select::-webkit-input-placeholder {
+  color: black;
+  opacity: 1;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder,
+select::-moz-placeholder {
+  color: black;
+  opacity: 1;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder,
+select:-ms-input-placeholder {
+  color: black;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder,
+select::-ms-input-placeholder {
+  color: black;
+}
+
+input::placeholder,
+textarea::placeholder,
+select::placeholder {
+  color: black;
+  opacity: 1;
+}
+
+/* ------------------------------
+   Global elements
+------------------------------ */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--white);
+  font-family: "Inter", sans-serif;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+}
+
+/* ------------------------------
+   CSS Variables / Root Colors
+------------------------------ */
+:root {
+  --primary-dark-green: #153330;
+  --primary-skin: #d8b38f;
+  --primary-skin-light: #faf6f2;
+  --secondary-black-gray: #1d1f20;
+  --white: #ffffff;
+  --off-white: #fcf9f6;
+  --black: #000000;
+  --text-gray: #838c90;
+  --fakeBtn-gray: #efefef;
+}
+
+/* ------------------------------
+   button code start here
+------------------------------ */
+/* button skin */
+.btn-skin {
+  background-color: var(--primary-skin);
+  border: 1px solid var(--primary-skin);
+  border-radius: 360px;
+  color: var(--secondary-black-gray);
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 8px 18px;
+  transition: all 0.3s ease;
+}
+
+.btn-skin:hover {
+  transition: all 0.3s ease;
+  background-color: var(--primary-dark-green);
+  border: 1px solid var(--primary-dark-green);
+  color: var(--white);
+}
+
+/* button skin form */
+.btn-skin-form {
+  padding: 8px 24px;
+}
+
+/* button skin hero */
+.btn-skin-hero {
+  transition: all 0.3s ease;
+}
+
+.btn-skin-hero:hover {
+  transition: all 0.3s ease;
+  background-color: var(--white);
+  border: 1px solid var(--white);
+  color: var(--secondary-black-gray);
+}
+
+/* button white */
+.btn-white {
+  background-color: var(--white);
+  border: 1px solid var(--white);
+  border-radius: 360px;
+  color: var(--secondary-black-gray);
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+}
+
+.btn-white:hover {
+  transition: all 0.3s ease;
+  background-color: var(--primary-skin);
+  border: 1px solid var(--primary-skin);
+}
+
+/* button darkgreen */
+.btn-darkGreen {
+  background-color: var(--primary-dark-green);
+  border: 1px solid var(--primary-dark-green);
+  border-radius: 360px;
+  color: var(--white);
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 8px 24px;
+  transition: all 0.3s ease;
+}
+
+.btn-darkGreen:hover {
+  transition: all 0.3s ease;
+  background-color: var(--white);
+  border: 1px solid var(--white);
+  color: var(--secondary-black-gray);
+}
+
+/* ------------------------------
+   button code end here
+------------------------------ */
+/* ------------------------------
+   tabs code start here
+------------------------------ */
+.our-project {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 0;
+  padding: 80px 0;
+  background: linear-gradient(180deg,
+      var(--white) 1.85%,
+      var(--primary-skin-light) 97.46%);
+}
+
+.inner-our-project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tabs {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.all-tabs {
+  background-color: #faf6f2;
+  border-radius: 12px;
+}
+
+[role="tablist"] {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 8px 10px;
+}
+
+[role="tab"] {
+  flex: 1 0 auto;
+  padding: 10px 35px;
+  border: 2px solid var(--white);
+  background: var(--white);
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 18px;
+  color: #5a6164;
+  transition: background 0.15s ease-in-out;
+  display: flex;
+  gap: 10px;
+  border-radius: 360px;
+  align-items: center;
+}
+
+[role="tab"]:hover {
+  cursor: pointer;
+  border: 2px solid var(--primary-skin);
+  background: var(--primary-skin);
+  color: white;
+}
+
+[role="tab"]:hover svg g path,
+[role="tab"]:hover svg path {
+  fill: #ffffff;
+}
+
+[role="tab"][aria-selected="true"] {
+  background: var(--primary-skin);
+  border-color: var(--primary-skin);
+  color: white;
+  position: relative;
+}
+
+[role="tab"][aria-selected="true"] svg g path,
+[role="tab"][aria-selected="true"] svg path {
+  fill: #ffffff;
+}
+
+[role="tabpanel"] {
+  position: relative;
+  z-index: 2;
+}
+
+[role="tabpanel"]:not([tabindex]) {
+  display: none;
+}
+
+.tabpanels {
+  margin-top: 60px;
+  width: 100%;
+}
+
+.tabpanel-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 20px;
+}
+
+.tab-single-card {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 20px;
+  width: 100%;
+  height: 465px;
+  padding: 20px;
+  display: flex;
+  align-items: end;
+}
+
+.tab-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+[role="tabpanel"] {
+  animation: slideFromRight 0.35s ease-out;
+}
+
+.margin {
+  /* margin: 60px 0 80px 0; */
+  margin-top: 60px;
+}
+
+@keyframes slideFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ------------------------------
+   tabs code end here
+------------------------------ */
+/* map */
+.our-map {
+  display: flex;
+  justify-content: center;
+  padding: 80px 0;
+}
+
+.inner-map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+}
+
+.para-pding {
+  padding: 0 18%;
+}
+
+.googleMap {
+  width: 100%;
+  height: 700px;
+  border-radius: 20px;
+}
+
+/* ------------------------------
+   generic code start here
+------------------------------ */
+/* ------------------
+Hero section start
+-------------------- */
+.hero-section {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.inner-hero-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.cta {
+  display: flex;
+  gap: 30px;
+}
+
+/* ------------------
+Hero section end
+-------------------- */
+.text-h1 {
+  font-size: 80px;
+  line-height: 90px;
+  font-weight: 700;
+}
+
+.text-h2 {
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.text-h3 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.text-counter {
+  font-size: 42px;
+  font-weight: 600;
+}
+
+.text-h5 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.text-para-hero {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.text-para {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.text-para-big {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.black {
+  color: var(--black);
+}
+
+.skin {
+  color: var(--primary-skin);
+}
+
+.darkGreen {
+  color: var(--primary-dark-green);
+}
+
+.white {
+  color: var(--white);
+}
+
+.gray {
+  color: var(--text-gray);
+}
+
+.hover-skin:hover {
+  transition: all 0.3s ease;
+  color: var(--primary-skin);
+}
+
+/* fake buttons */
+.fakeBtn-white {
+  background-color: var(--white);
+  border: 1px solid var(--white);
+  border-radius: 360px;
+  color: var(--secondary-black-gray);
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.fakeBtn-gray {
+  background-color: var(--fakeBtn-gray);
+  border: 1px solid var(--fakeBtn-gray);
+  border-radius: 30px;
+  color: var(--secondary-black-gray);
+  font-size: 16px;
+  font-weight: 700;
+  padding: 8px 14px;
+}
+
+.terms-of-use {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-radius: 0;
+  padding: 80px 0 100px 0;
+  background: linear-gradient(180deg,
+      var(--white) 1.85%,
+      var(--primary-skin-light) 97.46%);
+}
+
+.inner-terms {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+}

@@ -1,0 +1,154 @@
+/* ------------------
+footer start
+-------------------- */
+.footer-main {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 80px 0 0 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.divider {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  border-bottom: 1px solid #ffffff4d;
+  padding: 0 0 40px 0;
+}
+
+.footer-inner-box {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  /* flex-direction: column; */
+}
+
+/* email code here */
+.email {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 34%;
+}
+
+.form {
+  background-color: var(--white);
+  border-radius: 360px;
+  border: 1px solid var(--white);
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  align-items: center;
+  /* $$$$$$$$$$$$$$$$$ */
+  /* flex-direction: column; */
+  /* $$$$$$$$$$$$$$$$$ */
+  width: 100%;
+  justify-content: space-between;
+}
+
+.email-icon {
+  background-color: var(--primary-skin);
+  border-radius: 360px;
+  padding: 7px 8px 4px 8px;
+}
+
+.input-email {
+  border: none;
+  padding: 14px 0;
+  width: 100%;
+}
+
+/* email code end here */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.icon-box div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.icon-box:hover div span {
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: var(--white);
+}
+
+.icon-box:hover a span {
+  transition: all 0.3s ease;
+  color: var(--primary-skin);
+}
+
+.navbar-footer {
+  flex-direction: column-reverse;
+  display: flex;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.navbar-footer li a:hover {
+  transition: all 0.3s ease;
+  color: var(--primary-skin);
+}
+
+/* footer logo */
+.footer-logo a img {
+  width: 150px;
+}
+
+.info-container {
+  max-width: 300px;
+  width: 100%;
+  justify-content: space-between;
+  display: flex;
+  /* gap: 130px; */
+}
+
+/* social-icons */
+.social-icons {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.social-icons a {
+  background-color: var(--primary-skin);
+  padding: 7px 8px 6px 8px;
+  border-radius: 360px;
+  border: 1px solid var(--primary-skin);
+}
+
+.social-icons a:hover svg {
+  transition: all 0.3s ease;
+  transform: scale(1.1);
+}
+
+.social-icons a svg {
+  transition: all 0.3s ease;
+  width: 20px;
+  height: 20px;
+}
+
+.copyright {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

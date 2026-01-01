@@ -1,0 +1,116 @@
+/* ------------------
+header start
+-------------------- */
+.header-main {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 -116px 0;
+  position: relative;
+}
+
+.header-inner-box {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 360px;
+  padding: 18px 24px;
+  backdrop-filter: blur(12px);
+}
+
+.header-inner-box a {
+  z-index: 5;
+}
+
+.header-inner-box a img {
+  width: 75px;
+  margin-top: 3px;
+  margin: 3px 6px 0 0;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.navbar {
+  display: flex;
+  gap: 40px;
+}
+
+.navbar li a {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--secondary-black-gray);
+  transition: all 0.3s ease;
+}
+
+.navbar li a:hover {
+  color: var(--primary-skin);
+  transition: all 0.3s ease;
+}
+
+/* ------------------------------
+   hamburger code start here
+------------------------------ */
+.hamburger {
+  /* height: 50px;
+  width: 50px; */
+  transform: 0.2s;
+  position: relative;
+  display: none;
+}
+
+.hamburger .checkbox {
+  position: absolute;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.line {
+  transition: 0.5s;
+  stroke-width: 4px;
+  stroke: var(--black);
+}
+
+.lineTop {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 25;
+}
+
+.lineBottom {
+  stroke-dasharray: 40 40;
+  stroke-dashoffset: 60;
+}
+
+.lineMid {
+  stroke-dasharray: 40 40;
+}
+
+.hamburger .checkbox:checked+svg .line {
+  stroke: var(--primary-dark-green);
+}
+
+.hamburger .checkbox:checked+svg .lineTop {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotateZ(45deg) translate(-7px, -5px);
+}
+
+.hamburger .checkbox:checked+svg .lineMid {
+  stroke-dashoffset: 40;
+}
+
+.hamburger .checkbox:checked+svg .lineBottom {
+  stroke-dashoffset: 0;
+  transform-origin: left;
+  transform: rotateZ(-45deg) translate(-5px, 5px);
+}
+
+/* ------------------------------
+   hamburger code end here
+------------------------------ */
