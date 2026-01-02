@@ -1,17 +1,14 @@
 /* ------------------
 contact start
 -------------------- */
-.form {
+section.form {
   display: flex;
   justify-content: center;
   width: 100%;
   border-radius: 0;
-  padding: 10px;
-  border-radius: 50px;
-  background: linear-gradient(180deg,
-      var(--white) 1.85%,
-      var(--primary-skin-light) 97.46%);
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
+  padding: 100px 10px 170px;
+  background: linear-gradient(180deg, var(--white) 1.85%, var(--primary-skin-light) 97.46%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
 }
 
 .cnt-form {
@@ -29,4 +26,10 @@ contact start
 .cnt-form img {
   width: 90%;
   object-fit: contain;
+}
+
+@media (max-width: 584px) {
+  section.form {
+    padding: 50px 10px 120px;
+  }
 }

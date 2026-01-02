@@ -286,7 +286,11 @@ li {
   gap: 10px;
   border-radius: 360px;
   align-items: center;
-  /* max-width: max-content; */
+  transition: all .3s ease;
+
+  svg path {
+    transition: all .3s ease;
+  }
 }
 
 [role="tab"]:hover {

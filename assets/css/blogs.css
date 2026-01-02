@@ -6,8 +6,9 @@ Blogs start
   justify-content: center;
   width: 100%;
   border-radius: 0;
-  padding: 120px 0;
+  padding: 120px 0 160px;
   background: linear-gradient(180deg, #faf6f2 1.85%, #faf6f2 97.46%);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 96%);
 }
 
 .content-projects {
@@ -34,14 +35,14 @@ Blogs start
 
 .tabs-container {
   background-color: #ffffff;
-  border-radius: 10px;
+  border-radius: 40px;
 }
 
 [data-role="tablist"] {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  padding: 8px 10px;
+  gap: 12px;
+  padding: 12px;
 }
 
 [data-role="tab"] {
@@ -60,18 +61,19 @@ Blogs start
   gap: 10px;
   border-radius: 360px;
   align-items: center;
+  padding: 10px 16px;
 }
 
+button[data-active],
 [data-role="tab"]:hover {
   cursor: pointer;
   border: 2px solid var(--primary-skin);
   background: var(--primary-skin);
   color: white;
-}
 
-[data-role="tab"]:hover svg g path,
-[data-role="tab"]:hover svg path {
-  fill: #ffffff;
+  svg path {
+    fill: #ffffff;
+  }
 }
 
 [data-role="tab"][aria-selected="true"] {
@@ -91,10 +93,6 @@ Blogs start
   z-index: 2;
 }
 
-[data-role="panel"]:not([tabindex]) {
-  display: none;
-}
-
 .panels-wrapper {
   margin-top: 60px;
   width: 100%;
@@ -111,11 +109,20 @@ Blogs start
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  &:hover {
+    img {
+      transform: translateY(-10px) scale(1.025);
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
+        rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    }
+  }
 }
 
 .card-item img {
   width: 100%;
   border-radius: 20px;
+  transition: all .3s ease;
   height: 500px;
   object-fit: cover;
 }
@@ -132,24 +139,8 @@ Blogs start
   gap: 10px;
 }
 
-[data-role="panel"] {
-  animation: slideRight 0.35s ease-out;
-}
-
 .space-bottom {
   margin: 60px 0 80px 0;
-}
-
-@keyframes slideRight {
-  0% {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 @media (max-width:750px) {
