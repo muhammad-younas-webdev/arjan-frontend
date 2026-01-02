@@ -53,7 +53,7 @@
 /* cards */
 .cards {
   display: grid;
-  gap: 20px;
+  gap: 16px;
   margin-top: 100px;
   grid-template-columns: repeat(4, 1fr);
 }
@@ -68,25 +68,42 @@
   gap: 14px;
   transition: all 0.3s ease;
 
+  .card-icon {
+    margin-left: auto;
+  }
+
+  h3 {
+    margin-left: auto;
+  }
+
   &:hover {
-    transition: all 0.3s ease;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px,
       rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    transform: translateY(-10px);
+    cursor: default;
+
+    img {
+      transform: scale(1.15);
+    }
   }
 }
 
 .cards .single-card:nth-child(even) {
-  margin: -60px 0 60px 0;
+  margin: -50px 0 50px 0;
 }
 
 .card-icon {
   background-color: var(--primary-dark-green);
-  padding: 25px;
   border-radius: 360px;
+  width: 80px;
+  aspect-ratio: 1/1;
+  display: grid;
+  place-items: center;
 }
 
 .card-icon img {
   width: 40px;
+  transition: all 0.3s ease;
   aspect-ratio: 1;
 }
 
@@ -104,7 +121,6 @@
 }
 
 .inner-our-number {
-  flex-direction: column;
   display: flex;
   gap: 20px;
 }
@@ -114,7 +130,7 @@
   flex-direction: column;
   gap: 20px;
   align-items: start;
-  width: 50%;
+  width: 40%;
   justify-content: center;
 }
 
@@ -122,7 +138,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, auto);
-  width: 50%;
+  width: 60%;
   gap: 20px;
 }
 
@@ -131,4 +147,24 @@
   background-color: white;
   padding: 60px 20px 40px 20px;
   border-radius: 20px;
+
+  p {
+    margin-top: 3px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .inner-our-number {
+    flex-direction: column;
+  }
+
+  .number-info {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .numbers-card {
+    width: 100%;
+    max-width: 700px;
+  }
 }

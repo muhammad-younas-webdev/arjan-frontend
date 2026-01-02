@@ -732,6 +732,8 @@
         }
 
         .img-section {
+          width: 100%;
+
           img {}
         }
       }
@@ -836,7 +838,13 @@
 
         .tabs {
           .all-tabs {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+
             button[role="tab"] {
+              justify-content: center;
+
               svg {
 
                 path,
@@ -851,11 +859,11 @@
 
           .tabpanels {
             div[role="tabpanel"] {
-              display: none;
 
+              /* display: none; */
               &[tabindex="0"],
               &.active {
-                display: block;
+                /* display: block; */
               }
 
               .tabpanel-content {
